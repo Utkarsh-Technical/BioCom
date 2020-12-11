@@ -1,0 +1,1316 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title> BioCom </title>
+    <!-- Required meta tags -->
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <!-- Favicon -->
+    <link rel="shortcut icon" href="img1/logo.png" />
+    <!-- bootstrap -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- REVOLUTION STYLE SHEETS -->
+    <link href="revolution/css/settings.css" rel="stylesheet" type="text/css">
+    <!-- ADD-ONS CSS FILES -->
+    <link href="revolution/css/revolution.addon.particles.css" rel="stylesheet" type="text/css">
+    <!-- main style -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- responsive -->
+    <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+    <!-- custom -->
+    <link href="css/custom.css" rel="stylesheet" type="text/css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/fontawesome.min.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        figure{
+            padding: 0 ;
+            margin: 0 ;
+            text-decoration: none !important;
+        }
+        .tp-fullwidth-forcer{
+            height: 100vh!important;
+        }
+        .drop-div{
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .flip{
+            color: white;
+            font-size: 28px;
+            font-family: Roboto;
+            animation: flip 3s;
+        }
+        @keyframes flip{
+            0%{
+                background-color: white;
+                transform: rotateX(-360deg);
+            }
+            100%{
+                background-color: transparent;
+                transform: rotateX(0deg);
+            }
+        }
+        .button-car{
+            background: rgb(2,216,113);
+            display: inline-block;
+            color: black;
+            border-radius: 5px;
+            position: absolute;
+            z-index: 1000;
+            top: 64%;
+            left: 50%;
+            padding: 7px 15px;
+            transform: translate(-50%, -50%);
+            animation: button-up 1s ease 1 normal;
+        }
+        .button-car:hover{
+            opacity: 0.7;
+        }
+        .typewriter h1 {
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            font-size: 3.8rem;
+            color: white;
+            border-right: 2px solid white;
+            font-family: Roboto;
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            animation: 
+                typing 6.1s steps(40, end) forwards,
+                blink-caret .75s step-end infinite;
+        }
+
+
+            /* The typing effect */
+        @keyframes typing {
+            0% { width: 0 }
+            40% { width: 100% }
+            50% { width: 100%;}
+            60% { width: 100%; }
+            100% { width: 0 }
+        }
+
+            /* The typewriter cursor effect */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: white; }
+        }
+        @keyframes button-up{
+            0%{
+                opacity: 0.5;
+                transform: translate(-50%,100%);
+            }
+            100%{
+                transform: translate(-50%,-50%);
+            }
+        }
+        @media(max-width:768px){
+            .flip{
+                font-size: 1rem;
+            }
+            .button-car{
+                top: 62%;
+                font-size: 0.9rem;
+                padding: 3px 15px;
+            }
+            .typewriter h1{
+                font-size: 1.9rem;
+            }
+        }
+        @media(max-width:760px){
+            .fixed .header-sticky{
+                padding: 0px 2px 0 10px!important;
+            }
+        }
+        @media(max-width:410px){
+            .typewriter h1{
+                font-size: 1.4rem;
+            }
+        }
+        .btn:focus{
+            box-shadow: none;
+        }
+        .header-main{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+        }
+        .header-main .container-fluid{
+            padding: 0;
+            margin: 0;
+        }
+        .header-main .nav{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: transparent;
+            padding: 28px 60px;
+        }
+        .brand .nav-logo{
+            width: 50px;
+            height: 50px;
+            margin: 0 10px 0 0 ;
+        }
+        .brand .brand-content{
+            font-weight: 800;
+            font-family: Roboto;
+            color: white;
+        }
+        .header-main .menu-area .navbar-collapse .nav-item{
+            margin: 0 10px;
+        }
+        .header-sticky .nav-item:hover{
+            background-color: rgb(2, 216, 113);
+            border-bottom: 2px solid black;
+        }
+        .header-main .menu-area .navbar-collapse a{
+            color: white;
+        }
+        .header-main .menu-area .navbar-collapse a:hover{
+            color: rgb(2, 216, 113);
+        }
+        .header-main .menu-area .main-menu .navbar-toggler{
+            color: white;
+        }
+        .contact-btn .cbtn{
+            position: relative;
+            display: inline-block;
+            font-size: 16px;
+            padding: 12px 40px;
+            background: white;
+            color: black;
+            font-weight: 400;
+            text-transform: capitalize;
+            z-index: 1;
+            border-radius: 2px;
+            transition: all 200ms ease;
+            -webkit-transition: all 200mx ease;
+        }
+        .contact-btn .cbtn:hover{
+            background: rgb(2, 216, 113);
+            color: white;
+            transition: all 200ms ease;
+            -webkit-transition: all 200ms ease;
+        }
+        .header-sticky{
+            opacity: 0;
+            visibility: hidden;
+            box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.7);
+        }
+        .fixed .header-sticky{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.3s;
+            animation: fadeInDown 500ms linear 1;
+            background-color: white;
+            text-align: left;
+            padding: 0 50px;
+        }
+        .fixed .header-sticky a{
+            color: black;
+        }
+        .fixed .header-sticky .brand-content{
+            color: black;
+        }
+        .fixed .header-sticky .logo{
+            padding: 10px 0px;
+        }
+        .fixed .header-sticky .menu-area{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .fixed .header-sticky .main-menu{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .fixed .header-sticky .navbar-collapse, .navbar-nav, .nav-item{
+            height: 100%;
+            align-items: center;
+        }
+        .fixed .header-sticky .nav-item{
+            display: flex;
+            padding: 0 20px;
+        }
+        .fixed .header-sticky .active{
+            background-color: rgb(2, 216, 113);
+            border-bottom: 2px solid black;
+        }
+        .car-pic{
+            height: 100vh;
+            background-position: 70%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .pic-1{
+            background-image: url(./res/img/lab1.jpg);
+        }
+        .pic-2{
+            background-image: url(./res/img/lab2.jpg);
+        }
+        .carousel-control{
+            position: absolute;
+            display: flex;
+            z-index: 3;
+            bottom: 0;
+            right: 50px;
+            transform: translateY(50%);
+        }
+        .carousel-control .carousel-prev,.carousel-next{
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0;
+            padding: 25px;
+            margin-right: 2px;
+        }
+        .carousel-control .carousel-prev:hover,.carousel-next:hover{
+            background-color: rgb(2, 216, 113);
+        }
+        .carousel-control .fas{
+            color: white;
+        }
+        .carousel-inner .top-carousel-content{
+            position: absolute;
+            left: 0;
+            height: 100%;
+            background-color: rgb(2, 216, 113);
+            opacity: 0.7;
+            transform: rotate(45deg);
+        }
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        } 
+        @media(max-width:992px){
+            .contact-btn{
+                display: none;
+            }
+        }
+        @media(max-width:767.9px){
+            .header-main .nav{
+                padding: 28px 30px;
+            }
+            .header-sticky .brand .nav-logo{
+                width: 40px;
+                height: 40px;
+            }
+            .header-sticky .brand-content{
+                font-size: 0.9rem;
+                font-weight: 600;
+            }
+        }
+        .short-nav{
+            z-index: 1000000;
+            background-image: url(img1/black.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            color: white;
+            text-align: center;
+            height: 100vh;
+            display: none;
+        }
+        .fadeuu{
+            display: flex;
+            animation: drop-in 1.2s;
+        }
+        .fadedo{
+            display: flex;
+            height: 0;
+            animation:slideup 1.2s;
+        }
+        @keyframes slideup{
+            0%{
+                height: 100vh;
+            }
+            100%{
+                height: 0;
+            }
+        }
+        @keyframes drop-in{
+            0%{
+                height: 0;
+            }
+            100%{
+                height: 100vh;
+            }
+        }
+        .short-nav ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .short-nav ul li{
+            padding: 10px 10px;
+            width: 100%;
+        }
+        .short-nav ul li a{
+            color: white;
+            position: relative;
+            padding: 10px;
+        }
+        .short-nav ul li a:hover{
+            color: rgb(2, 216, 113);
+        }
+        .short-nav .close-btn{
+            position: absolute;
+            color: rgb(2, 216, 113);
+            top: 30px;
+            font-size: 40px;
+            right: 30px;
+        }
+        .short-nav .title::after{
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 4px;
+            background: #02d871;
+            display: inline-block;
+        }
+        .abc{
+            height: 50px;
+        }
+        @media(min-width:992px){
+            .abc{
+                height: 30px;
+            }
+        }
+        .icons{
+            font-size: 1.2rem;
+            padding: 5px;
+            margin: 5px;
+            color: white;
+        }
+        .icons:hover{
+            color: rgb(2, 216, 113);
+        }
+        .images-team{
+            width: 200px; border-radius: 50%; height: 200px; border: 10px solid white;
+        }
+        .images-team:hover{
+            border-color: rgb(2, 216, 113)!important;
+        }
+        .link-logo{
+            border-radius: 50%; 
+            background-color: white; 
+            border: 1px solid black; 
+            width: 30px; 
+            height: 30px; 
+            text-align: center;
+             margin: 5px; 
+             display: flex; 
+             align-items: center; 
+             justify-content: center;
+        }
+        .link-logo:hover{
+            background-color: rgb(2, 216, 113);
+            color: white;
+            border-color: white;
+        }
+        .link-logo a{
+            color: black;
+        }
+        .link-logo:hover a{
+            color: white;
+        }
+        .titlee::before{
+            left: 5%;
+        }
+    </style>
+</head>
+<script>
+    var x;
+    function opennav(){
+        x = window.pageYOffset;
+        $('.all').addClass('d-none');
+        $('body').addClass('bg-dark');
+        $('.short-nav').removeClass('fadedo');
+        $('.short-nav').toggleClass('fadeuu');
+        $('.main-header').addClass('d-none');
+        console.log(x);
+    }
+    function closenav(){
+        $('body').removeClass('bg-dark');
+        $('.short-nav').toggleClass('fadeuu fadedo');
+        $('.all').removeClass('d-none');
+        setTimeout(function(){$('.main-header').removeClass('d-none')},1230);
+        $('.header-sticky').addClass('d-none');
+        window.scrollTo(0, x);
+    }
+</script>
+<body>
+    <div class="short-nav">
+        <span class="close-btn" onclick="closenav()">X</span>
+        <ul>
+            <li><a class="title" href="#home"  onclick="closenav()">Home</a></li>
+            <li><a class="title" href="#aboutus" onclick="closenav()">About Us</a></li>
+            <li><a class="title" href="#domains" onclick="closenav()">Domains</a></li>
+            <li><a class="title" href="#team" onclick="closenav()">Team</a></li>
+            <li><a class="title" href="#testimonial" onclick="closenav()">Our Articles</a></li>
+            <li><a class="title" href="#contact" onclick="closenav()">Contact Us</a></li>
+        </ul>
+    </div>
+<!-- loading -->
+ <section class="all">
+    <div id="loading">
+        <div id="loading-center">
+            <img src="img1/logo.png" alt="loder">
+        </div>
+    </div>
+    <header class="main-header" id="home" style="position: absolute; background: transparent;">
+        <div class="header-main">
+            <div class="container-fluid">
+                <div class="nav">
+                    <div class="logo">
+                        <figure class="brand">
+                            <a href="#">
+                                <img class="nav-logo" src="res/img/logo.png" alt="">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="menu-area ">
+                        <nav class="main-menu navbar-expand-lg">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggler" onclick="opennav()">
+                                    <span class="fas fa-bars"></span>
+                                </button>
+                            </div>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                  <li class="nav-item active">
+                                    <a class="nav-link" href="#home"><i class="fas fa-home"></i>&nbsp;Home</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#aboutus"><i class="fas fa-info"></i>&nbsp;About Us</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#domains"><i class="fas fa-dna"></i>&nbsp;Domains</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#team"><i class="fas fa-users"></i>&nbsp;Team</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#testimonial"><i class="fas fa-newspaper"></i>&nbsp;Our Articles</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#contact"><i class="fas fa-address-card"></i>&nbsp;Contact Us</a>
+                                  </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="contact-btn" style="width: 50px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="navbar" class="header-sticky">
+            <div class="nav">
+                <div class="logo col-lg-4 col-10">
+                    <figure class="brand">
+                        <a href="#">
+                            <img class="nav-logo" src="res/img/logo.png" alt="">
+                        </a>
+                    </figure>
+                </div>
+                <div class="menu-area col-lg-8 col-2 justify-content-end">
+                    <nav class="main-menu navbar-expand-lg">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggler" onclick="opennav()">
+                                <span class="fas fa-bars"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                              <li class="nav-item active">
+                                <a class="nav-link" href="#home"><i class="fas fa-home"></i>&nbsp;Home</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#aboutus"><i class="fas fa-info"></i>&nbsp;About Us</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#domains"><i class="fas fa-dna"></i>&nbsp;Domains</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#team"><i class="fas fa-users"></i>&nbsp;Team</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#testimonial"><i class="fas fa-newspaper"></i>&nbsp;Our Articles</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#contact"><i class="fas fa-address-card"></i>&nbsp;Contact Us</a>
+                              </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--=================================   Banner   =========================== -->
+  <div id="rev_slider_116_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="bg-effect" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+         <!-- START REVOLUTION SLIDER 5.4.8 fullwidth mode -->
+         
+         <div id="rev_slider_116_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.8">
+            <ul class="icon-none" style="background-color: black; max-height: 100vh; height: 100vh!important;">
+               <!-- SLIDE  --> 
+            <li  data-index="rs-385" data-transition="random-static,random-premium,random" data-slotamount="default,default,default,default" data-hideafterloop="0" data-hideslideonmobile="off"  data-randomtransition="on" data-easein="default,default,default,default" data-easeout="default,default,default,default" data-masterspeed="default,default,default,default"  data-thumb="revolution/assets/100x50_7bb4f-fgfg.jpg"  data-rotate="0,0,0,0"  data-saveperformance="off"  class="b1-video" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                  <!-- MAIN IMAGE -->
+                  <!-- LAYERS -->
+                  <!-- LAYER NR. 1 -->
+                  <!--<div>
+                      <h2 class="drop">Biocom Welcomes you!</h2>
+                  </div>-->
+                  
+                  <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <ol class="carousel-indicators" style="bottom: 5%;">
+                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                      </ol>
+                    <div class="carousel-inner">
+                    <a href="https://medium.com/biocom-srm-biology-community" class="button-car">Blog</a>
+                    <div class="d-flex" style="color: white;  border-radius: 5px;  position: absolute; z-index: 1000;  top: 70%; left: 50%; padding: 7px 15px; transform: translate(-50%, -50%);">
+                        <ul class="d-flex">
+                            <li><a href="https://m.facebook.com/BioCom-SRM-Biology-Community-113130513495657/"><i class="icons fab fa-facebook-f fa-md"></i></a></li>
+                            <li><a href="https://www.instagram.com/biocom_srm/"><i class="icons fab fa-instagram fa-md"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/biocom-srmbiologycommunity/"><i class="icons fab fa-linkedin-in fa-md"></i></a></li>
+                            <li><a href="https://medium.com/biocom-srm-biology-community"><i class="icons fab fa-medium-m fa-md"></i></a></li>
+                        </ul>
+                    </div>
+                      <div class="carousel-item active">
+                        <!--<img src="img1/laboratory.jpg" class="d-block w-100" alt="...">-->
+                        <div style="height: 100vh; background-image: url(img1/laboratory.jpg); background-repeat: no-repeat; background-size: cover; background-position: right;">
+                            <div class="drop-div d-flex justify-content-center align-items-center" style="flex-direction: column;">
+                                <span class="flip">Opportunities to Explore Different Domains in Biology.</span>
+                                <!--<span class="drop">BioCom Welcomes You</span>-->
+                                <div class="typewriter">
+                                    <h1>BioCom Welcomes You.</h1>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div style="height: 100vh; background-image: url(img1/25323867_10209974978440526_1907667161_n.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;">
+                            <div class="drop-div d-flex justify-content-center align-items-center" style="flex-direction: column;">
+                                <span class="flip">Mentor programs into understanding and conducting research.</span>
+                                <div class="typewriter">
+                                    <h1>Read | Research | Innovate</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<img src="img1/25323867_10209974978440526_1907667161_n.jpg" class="d-block w-100" alt="...">-->
+                      </div>
+                      <div class="carousel-item">
+                        <div style="height: 100vh; background-image: url(img1/Laboratory-Medicine.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;">
+                            <div class="drop-div d-flex justify-content-center align-items-center" style="flex-direction: column;">
+                                <span class="flip">Chances to actively Collab with various existing Biotech Companies.</span>
+                                <div class="typewriter">
+                                    <h1>We are a team of Professionals.</h1>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </li>
+             
+            <!--
+                
+            -->
+            </ul>
+         </div>
+</div><!-- END REVOLUTION SLIDER -->
+    <!--=================================
+Banner -->
+    <!--=================================
+Main Content -->
+    <div class="main-content">
+             
+        <!--=================================
+Our Great Features -->
+    
+        <!--================================
+Why Choose Qwilo  -->
+        <!--=================================
+About Us -->
+        <section class="overview-block-pt green-bg" id="aboutus">
+           
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="heading-title iq-font-white text-center">
+                            <h2 class="title white iq-tw-6">About Us</h2>
+                            <h6>The interplay of Biology and Technology builds our world, and we can harness it to shift
+                                humanity from <br> a scarcity to an abundance economy.</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="iq-about4 white-bg">
+                            <div class="owl-carousel arrow-2" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="1" data-items-laptop="1" data-items-tab="1" data-items-mobile="1" data-items-mobile-sm="1" >
+                                <div class="item">
+                                    <div class="row no-gutters">
+                                        <div class="col-lg-6 col-md-12 col-sm-12 iq-md-hide" style="background-image: url('img1/48.jpg'); background-position: center center; background-size: cover;">
+                                        </div>
+                                        <div class="col-lg-6 col-md-12 col-sm-12 iq-pall-30" style="min-height: 382px;">
+                                            <h3 class="small-title iq-tw-6">How is BioCom Different from others?</h3>
+                                            <p class="typo-style1 iq-mt-40">BioCom is a Biology community, which aims at creating a steady platform for all the
+                                                Bio-enthusiasts and the technology geeks, wherein they would work together to put forward their ideas, work on research projects, learn about all the latest discoveries related to Bio-tech!</p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="row no-gutters">
+                                        <div class="col-lg-6 col-md-12 col-sm-12 iq-md-hide" style="background-image: url('images/bg/44.jpg'); background-position: center center; background-size: cover;">
+                                        </div>
+                                        <div class="col-lg-6 col-md-12 col-sm-12 iq-pall-30" >
+                                            <h3 class="small-title iq-tw-6">How is BioCom Different from others?</h3>
+                                            <p class="typo-style1 iq-mt-40">In BioCom, we deal with different areas of Life Sciences and Technical domains to bring the innovation. BioCom encourages peer to peer teaching that makes a better understanding of Science among students. We aim to explore various fields of Sciences through involvement of biology & tech.
+                                                Our other features include conduction of events like workshops, sessions, online quizes, campaigns and so on.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=================================
+About Us -->
+        <!--=================================
+Counter -->
+        <div class="overview-block-pt white-bg iq-mt-130">
+            <div class="container">
+                <div class="row iq-mt-130 iq-counter3">
+                    <!--
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="iq-counter brd text-left d-flex iq-pall-20 justify-content-center align-items-center">
+                            <div class=" iq-font-black iq-mr-10 text-right col-3 justify-content-end abc" ><img class="img-fluid" src="img1/workshops.png" style="height: 100%; width: auto;" alt=""></div>
+                            <div class="r d-flex justify-content-start align-items-center col-9 mx-0"><span class="timer iq-font-green iq-tw-6 iq-mt-0" data-to="25" data-speed="4000">25</span>
+                                <div style="margin-left: 10px;">Workshops</div></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="iq-counter brd text-left d-flex iq-pall-20 justify-content-center align-items-center">
+                            <div class=" iq-font-black iq-mr-10 text-right col-3 justify-content-end abc"><img class="img-fluid" src="images/counter/2.png" style="height: 100%; width: auto;" alt=""></div>
+                            <div class="r d-flex justify-content-start align-items-center col-9 mx-0">
+                                <span class="timer iq-font-green iq-tw-6 iq-mt-0" data-to="4" data-speed="4000">4</span>
+                                <div style="margin-left: 10px;">Projects</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="iq-counter brd text-left d-flex iq-pall-20 justify-content-center align-items-center">
+                            <div class=" iq-font-black iq-mr-10 text-right col-3 justify-content-end abc"><img class="img-fluid" style="height: 100%; width: auto;" src="img1/research.png" alt=""></div>
+                            <div class="r d-flex justify-content-start align-items-center col-9 mx-0">
+                                <span class="timer iq-font-green iq-tw-6 iq-mt-0" data-to="25" data-speed="4000">25</span>
+                                <div style="margin-left: 10px;">Research Paper</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="iq-counter brd text-left d-flex iq-pall-20 justify-content-center align-items-center">
+                            <div class=" iq-font-black iq-mr-10 text-right col-3 justify-content-end abc"><img class="img-fluid" style="height: 100%; width: auto;" src="img1/session.png" alt=""></div>
+                            <div class="r d-flex justify-content-start align-items-center col-9 mx-0">
+                                <span class="timer iq-font-green iq-tw-6 iq-mt-0" data-to="115" data-speed="4000">115</span>
+                                <div style="margin-left: 10px;">Seminars</div>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </div>
+        <!--=================================   Counter ======================================-->
+        <!--================================   Great Theme for Your Business  ================================-->
+       
+        
+        <section id="domains" class="overview-block-ptb device-aria iq-bg iq-over-black-80 jarallax" style="background-image: url('img1/m.png'); background-position: left center;" class="overview-block-ptb iq-hide">
+            <div class="container">
+                <div class="row">
+                     <div class="iq-mtb-15 iq-font-white">
+                        <div class="col-lg-12 col-md-12">
+                        <div class="heading-title text-center">
+                            <h2 class="small-title iq-font-white iq-tw-6 iq-mb-20">We Work On!</h2>
+                            <p>A diversed and key field of Science that deals with the current trend of biology and implements the latest technology to generate products beneficial for society. Life sciences open a wide range of different spheres and we at biocom work on the various field to solve issues faced by our society.</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 col-sm-6 iq-mt-40">
+                        <div class="iq-feature9 text-center iq-plr-10 wow fadeInUp" data-wow-duration="1.0s">
+                            <div class="iq-feature9-blog">
+                                <div class="left">
+                                    <i class="fas fa-capsules"></i>
+                                </div>
+                                <h5 class="iq-font-white iq-tw-6 iq-mt-15">Oncology & Immunology</h5>
+                                <p class="iq-font-white" >This deals with the latest trend in the field of oncology and immunology which enables us to provide all the necessary details to cure cancer by using the knowledge of immunology.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 iq-mt-40">
+                        <div class="iq-feature9 text-center iq-plr-10 wow fadeInUp" data-wow-duration="1.5s">
+                            <div class="iq-feature9-blog">
+                                <div class="left">
+                                    <i class="fas fa-bezier-curve"></i>
+                                </div>
+                                <h5 class="iq-font-white iq-tw-6 iq-mt-15">System Biology</h5>
+                                <p class="iq-font-white">The ability to design predictive, multiscale models enables our scientists to discover new biomarkers for disease, stratify patients based on unique genetic profiles, and target drugs and other treatments. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 iq-mt-40">
+                        <div class="iq-feature9 text-center iq-plr-10 wow fadeInUp" data-wow-duration="2.0s">
+                            <div class="iq-feature9-blog">
+                                <div class="left">
+                                    <i class="fas fa-x-ray"></i>
+                                </div>
+                                <h5 class="iq-font-white iq-tw-6 iq-mt-15">Human Physiology</h5>
+                                <p class="iq-font-white">It is the study of how the human body works. It describes the chemistry and physics behind basic body functions, from how molecules behave in cells to how systems of organs work together.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 iq-mt-40">
+                        <div class="iq-feature9 text-center iq-plr-10 wow fadeInUp" data-wow-duration="1.0s">
+                            <div class="iq-feature9-blog">
+                                <div class="left">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h5 class="iq-font-white iq-tw-6 iq-mt-15">Psychology</h5>
+                                <p class="iq-font-white">Psychology is science, helps us to understand the universal development of mental functions and social behaviour revolving around an individual or interpersonal relations with a living or non living species.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 iq-mt-40">
+                        <div class="iq-feature9 text-center iq-plr-10 wow fadeInUp" data-wow-duration="1.5s">
+                            <div class="iq-feature9-blog">
+                                <div class="left">
+                                    <i class="fas fa-crutch"></i>
+                                </div>
+                                <h5 class="iq-font-white iq-tw-6 iq-mt-15">Prosthetics</h5>
+                                <p  class="iq-font-white">In medicine, a prosthesis or prosthetic implant is an artificial device that replaces a missing body part. Prosthetics are intended to restore the normal functions of the missing body part.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="col-lg-4 col-md-6 col-sm-6 iq-mt-40">
+                        <div class="iq-feature9 text-center iq-plr-10 wow fadeInUp" data-wow-duration="2.0s">
+                            <div class="iq-feature9-blog">
+                                <div class="left">
+                                    <i class="fas fa-atom"></i>
+                                </div>
+                                <h5 class="iq-font-white iq-tw-6 iq-mt-15">Biochemistry</h5>
+                                <p class="iq-font-white">Biochemistry, study of the chemical substances and processes that occur in plants, animals, and microorganisms and of the changes they undergo during development and life.</p>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                    </div>
+                
+            </div>
+        </section>
+        
+        
+        
+        
+       
+        
+        <!--================================
+Great Theme for Your Business  -->
+        
+ <!--=================================
+Action Box -->
+<section class="iq-action-blog green-bg particles-bg" style="padding: 40px 40px;">
+    <canvas id="canvas"></canvas>
+    <div class="container">
+        <div class="row align-items-center">
+                <h2 class="iq-font-white iq-fw-4 iq-pb-10 text-center" style="font-family: 'Roboto Mono', monospace;">On a road to create a <strong class="iq-font-black">momentum by exploring in the field of Life Sciences </strong> with the assistance  of innovation in every of aspect of life!</h2>
+                <!-- <div>Lorem Ipsum is simply dummy text ever sincehar the 1500s, when an unknownshil printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</div>
+            </div> -->
+            <!-- <div class="col-lg-2 col-md-3 text-right"><a href="home-2.html#" class="button white grey iq-re-4-mt30 iq-mr-0">Read More</a> </div> -->
+        
+    </div>
+    </div>
+</section>
+<!--=================================
+Action Box -->
+
+
+        <!--=================================
+Team  -->
+        <section class="overview-block-ptb grey-bg" id="team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="heading-title text-center">
+                            <h2 class="title iq-tw-6">Meet the Team</h2>
+                            <p>Talents wins games, but teamwork and intelligence win championships. Teamwork is the ability to work together toward a common vision. The ability to direct individual accomplishment towards organizational objectives.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mx-0 w-100">
+                    <div class="col-md-3 col-12 d-flex justify-content-center align-items-center my-2" style="width: 200px; flex-direction: column;">
+                        <img src="img1/team/2.jpeg" class="images-team" style="" alt="">
+                        <div class="d-flex" style="flex-direction: column; align-items: center; justify-content: center;"><span style="font-weight: 600; font-size: 1.5rem;">Raktima Sengupta</span><span>Founder</span></div>
+                        <div class="d-flex"><span style="" class="link-logo"><a href="https://www.facebook.com/musu.sengupta" class=""><i class=" fab fa-facebook-f"></i></a></span><span style="" class="link-logo"><a href="https://www.linkedin.com/mwlite/in/raktima-sengupta-a81135169" class=""><i class="fab fa-linkedin-in"></i></a></span></div>
+                    </div>
+                    <div class="col-md-3 col-12 d-flex justify-content-center align-items-center my-2" style="width: 200px; flex-direction: column;">
+                        <img src="img1/team/13.jpeg" class="images-team" style="" alt="">
+                        <div class="d-flex" style="flex-direction: column; align-items: center; justify-content: center;"><span style="font-weight: 600; font-size: 1.5rem;">Mukul Khadke</span><span>Co-Founder</span></div>
+                        <div class="d-flex"><span style="" class="link-logo"><a href="https://www.facebook.com/mukul.khadke.18" class=""><i class=" fab fa-facebook-f"></i></a></span><span style="" class="link-logo"><a href="https://www.linkedin.com/in/mukul-khadke" class=""><i class="fab fa-linkedin-in"></i></a></span></div>
+                    </div>
+                    <div class="col-md-3 col-12 d-flex justify-content-center align-items-center my-2" style="width: 200px; flex-direction: column;">
+                        <img src="img1/team/0.jpg" class="images-team" style="" alt="">
+                        <div class="d-flex" style="flex-direction: column; align-items: center; justify-content: center;"><span style="font-weight: 600; font-size: 1.5rem;">Nikunj Panchal</span><span>Coordinator</span></div>
+                        <div class="d-flex"><span style="" class="link-logo"><a href="https://www.facebook.com/inikunjpanchal" class=""><i class=" fab fa-facebook-f"></i></a></span><span style="" class="link-logo"><a href="https://www.linkedin.com/in/nikunj7panchal" class=""><i class="fab fa-linkedin-in"></i></a></span></div>
+                    </div>
+                    <div class="col-md-3 col-12 d-flex justify-content-center align-items-center my-2" style="width: 200px; flex-direction: column;">
+                        <img src="img1/team/3.png" class="images-team" style="" alt="">
+                        <div class="d-flex" style="flex-direction: column; align-items: center; justify-content: center;"><span style="font-weight: 600; font-size: 1.5rem;">Dr. Shantanu Patil</span><span>SIIC Head</span></div>
+                        <div class="d-flex"><span style="" class="link-logo"><a href="https://www.srmist.edu.in/medicine/translational-medicine-research/faculty/dr-shantanu-patil-0" class=""><i class=" fas fa-info"></i></a></span><span style="" class="link-logo"><a href="https://www.linkedin.com/in/shantanu-patil-2355122/" class=""><i class="fab fa-linkedin-in"></i></a></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=================================
+Team  -->
+        <!--================================
+Testimonial -->
+        <section id="testimonial">
+        <div class="iq-testimonial2 overview-block-ptb iq-over-black-40 iq-bg jarallax" style="background-image: url('images/bg/36.jpg'); background-position: center center;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                    <h3 class="iq-tw-6 small-title iq-font-white titlee">Our Articles</h3>
+                  <div class="testi-white iq-brd iq-mt-40">
+                            <div class="owl-carousel re-inherit" data-autoplay="true" data-loop="true" data-nav="true" data-dots="false" data-items="1" data-items-laptop="1" data-items-tab="1" data-items-mobile="1" data-items-mobile-sm="1">
+                                <div class="item">
+                                    <div class="feedback">
+                                        <div class="iq-info brd-none">
+                                            <p>Biofilms comprise of colonies of microorganisms in which cells stick to each other and often also to a surface. These are 3D structures and are embedded within a slimy(sticky) matrix that is composed of extracellular polymeric substances (EPS) which comprises of polysaccharides, proteins, lipids and DNA.<a href="https://medium.com/biocom-srm-biology-community"> Read more...</a></p>
+                                        </div>
+                                        <div class="iq-mt-10">
+                                           
+                                            <div class="avtar-name">
+                                                <div class="iq-lead iq-mb-0 iq-tw-6 iq-font-green">Ramya Vishwanathan</div>
+                                                <span>Biotechnology-Regenerative medicine</span>
+                                                <div class="iq-star iq-font-dark"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="feedback">
+                                        <div class="iq-info brd-none">
+                                            <p>Molecular Docking, is a form of bioinformatic modelling which involves the interaction of two or molecules to form a stable complex. With the help of molecular docking, it is possible to predict and analyze the different positions or the different ways by which a molecule can bind to another, to form a stable adduct. Molecular Docking is usually done on the Autodock and the PYMOL software platforms, which provide a 3-Dimensional base for docking. <a href="https://medium.com/biocom-srm-biology-community"> Read more...</a></p>
+                                        </div>
+                                        <div class="iq-mt-10">
+                                            <!-- <div class="iq-avtar iq-mr-20"> <img alt="" class="img-fluid center-block" src="images/team/small/02.jpg"></div> -->
+                                            <div class="avtar-name">
+                                                <div class="iq-lead iq-mb-0 iq-tw-6 iq-font-green">Anasuya Chakraborty</div>
+                                                <span>Biotechnology</span>
+                                                <div class="iq-star iq-font-dark"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="feedback">
+                                        <div class="iq-info brd-none">
+                                            <p>Chronic obstructive pulmonary disease (COPD) is a respiratory disease that has a major impact worldwide. The currently-available drugs mainly focus on relieving the symptoms of COPD patients. Novel regenerative therapeutic approaches have been investigated with the aim of repairing or replacing the injured functional structures of the respiratory systems.<a href="https://medium.com/biocom-srm-biology-community"> Read more...</a></p>
+                                        </div>
+                                        <div class="iq-mt-10">
+                                            <!-- <div class="iq-avtar iq-mr-20"> <img alt="" class="img-fluid center-block" src="images/team/small/03.jpg"></div> -->
+                                            <div class="avtar-name">
+                                                <div class="iq-lead iq-mb-0 iq-tw-6 iq-font-green">Bharathi Ramanathan</div>
+                                                <span>Biotechnology-Regenerative Medicine.</span>
+                                                <div class="iq-star iq-font-dark"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="feedback">
+                                        <div class="iq-info brd-none">
+                                            <p>Albinism is a group of genetic conditions in which a person has no or very little melanin pigment in their skin, hair and eyes. Albinism occurs in all racial and ethnic groups throughout the world.<a href="https://medium.com/biocom-srm-biology-community"> Read more...</a></p>
+                                        </div>
+                                        <div class="iq-mt-10">
+                                            <!-- <div class="iq-avtar iq-mr-20"> <img alt="" class="img-fluid center-block" src="images/team/small/04.jpg"></div> -->
+                                            <div class="avtar-name">
+                                                <div class="iq-lead iq-mb-0 iq-tw-6 iq-font-green">G.Harini</div>
+                                                <span>Biotechnology-regenerative medicine</span>
+                                                <div class="iq-star iq-font-dark"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--================================ End Blog -->
+        </section>
+         <!--=================================
+Main Content -->
+    </div>
+    <!--=================================
+Footer-6 -->
+    <footer class="iq-footer6" id="contact">
+         <div class="footer-top iq-over-black-80 iq-bg jarallax" style="background-image: url('images/bg/34.jpg'); background-position: left center;">
+            <div class="container-fluid">
+               
+            </div>
+            <div class="container">
+               <div class="row overview-block-ptb4">
+                  <div class="col-lg-4 col-md-4 col-sm-6 iq-mtb-20">
+                     <div class="logo">
+                        <img id="footer_logo_img" class="img-fluid" src="img1/logo.png" alt="#">
+                        <div class="iq-font-white iq-mt-15">Research is creating new knowledge, and that happens only when innovative brains work together to come up with distinct ideas and new technologies.</div>
+                     </div>
+                  </div>
+                 
+                  <div class="col-lg-4 col-md-4 col-sm-6 iq-mtb-20 imp-link">
+                     <h5 class="small-title iq-tw-6 iq-font-white iq-mb-30 titlee">Important Links</h5>
+                     <ul>
+                        <li class="d-inline-block iq-font-black iq-mr-10 iq-mb-10"><a href="https://medium.com/biocom-srm-biology-community">Blogs</a></li>
+                        <li class="d-inline-block iq-font-black iq-mr-10 iq-mb-10"><a href="#">Seminars</a></li>
+                        <li class="d-inline-block iq-font-black iq-mr-10 iq-mb-10"><a href="#">Workshop</a></li>
+                        <li class="d-inline-block iq-font-black iq-mr-10 iq-mb-10"><a href="#">Research Papers</a></li>
+                        <li class="d-inline-block iq-font-black iq-mr-10 iq-mb-10"><a href="#">Project</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-6 iq-mtb-20 about-us">
+                    <h5 class="small-title iq-tw-6 iq-font-white iq-mb-30 titlee">Reach Us</h5>
+                    <ul><a href="https://www.google.com/search?q=SIIC+SRM&rlz=1C1CHBD_enIN889IN889&oq=SIIC+SRM&aqs=chrome..69i57.6249j0j7&sourceid=chrome&ie=UTF-8">
+                       <li class="iq-font-white iq-mt-15">SRM Incubation & Innovation Center,</li>
+                       <li class="iq-font-white iq-mt-15" >SRM Institute Of Science and Technology,</li>
+                       <li class="iq-font-white iq-mt-15">Chennai</li></a>
+                       <li class="iq-font-white iq-mt-15">Tamil Nadu-603203</li> 
+                       <li class="iq-font-white iq-mt-15"><a href="tel:6296602411" style="background: none; color: white; padding: 0;">+91 6296602411</a><br><a href="tel:9168625004" style="background: none; color: white; padding: 0;">+91 9168625004</a></li></a>
+                    </ul>
+                 </div>
+                  
+               </div>
+            </div>
+         </div>
+         <!-- footer top END -->
+         <div class="footer-bottom iq-ptb-20 dark-bg">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-6 col-sm-12">
+                     <div class="iq-copyright iq-mt-10 iq-font-white">
+                          Copyright 
+                          <span id="copyright">
+                           <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+                           </span>
+                          <a href="#" class="iq-font-green iq-tw-6">BioCom</a> All Rights Reserved 
+                      </div>
+                  </div>
+                  <div class="col-lg-6 col-sm-12">
+                     <ul class="iq-media-blog">
+                        <li><a href="https://www.instagram.com/biocom_srm/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://m.facebook.com/BioCom-SRM-Biology-Community-113130513495657/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/biocom-srmbiologycommunity/"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://medium.com/biocom-srm-biology-community"><i class="fab fa-medium-m"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+ </section>
+</body>
+
+
+     <!--================ Jquery =================-->
+    <!-- Jquery  -->
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAeFhX9Ym6I55nSeXikyPizDbFFyZMoPm8",
+    authDomain: "biocom-website.firebaseapp.com",
+    databaseURL: "https://biocom-website.firebaseio.com",
+    projectId: "biocom-website",
+    storageBucket: "biocom-website.appspot.com",
+    messagingSenderId: "550459903546",
+    appId: "1:550459903546:web:a5f26aaa8633ba76df2f03",
+    measurementId: "G-JY1KQ1QY7X"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+    <script src="js/jquery.min.js"></script>
+    <!-- popper  -->
+    <script src="js/popper.min.js"></script>
+    <!--  bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Google captcha code Js -->
+    <script src='../../../../www.google.com/recaptcha/api.js'></script>
+    <!-- Mega Menu -->
+    <script src="js/mega-menu/mega_menu.js"></script>
+    <!-- Main -->
+    <script src="js/main.js"></script>
+    <!-- ADD-ONS JS FILES -->
+    <script src="revolution/js/revolution.addon.particles.min.js"></script>
+    <!-- REVOLUTION JS FILES -->
+    <script src="revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.video.min.js"></script>  
+    
+     <!-- style-customizer -->
+    <script src="js/style-customizer.js"></script>
+    <!-- price_range_script -->
+    <script src="js/price_range_script.js"></script> 
+    <!-- modernizr.custom -->
+    <script src="js/modernizr.custom.js"></script> 
+    <!-- jquerypp.custom -->
+    <script src="js/jquerypp.custom.js"></script> 
+    <!-- bookblock -->
+    <script src="js/jquery.bookblock.js"></script> 
+    <!-- Custom -->
+    <script src="js/custom.js"></script>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        document.onscroll = function() {
+        var currentScrollPos = $(window).scrollTop();
+        if (currentScrollPos > $('.nav').height()) {
+            $('.main-header').addClass('fixed');
+            $('.header-sticky').removeClass('d-none');
+            //$('.carousel-control').removeClass('d-none');
+        } else {
+            $('.main-header').removeClass('fixed');
+            $('.header-sticky').addClass('d-none');
+            //$('.carousel-control').addClass('d-none');
+        }
+        prevScrollpos = currentScrollPos;
+        }
+
+        $('#carousel').carousel({
+            interval: 6000,
+            pause: true,
+            touch: true
+        });
+        $('.nav-item').click(function(){
+            $('.nav-item').removeClass('active');
+            $(this).addClass('active');
+        })
+// $.fn.letterDrop = function() {
+//   // Chainability
+//   return this.each( function() { 
+  
+//   var obj = $( this );
+  
+//   var drop = {
+//     arr : obj.text().split( '' ),
+    
+//     range : {
+//       min : 1,
+//       max : 9
+//     },
+    
+//     styles : function() {
+//       var dropDelays = '\n', addCSS;
+      
+//        for ( i = this.range.min; i <= this.range.max; i++ ) {
+//          dropDelays += '.ld' + i + ' { animation-delay: 1.' + i + 's; }\n';  
+//        }
+      
+//         addCSS = $( '<style>' + dropDelays + '</style>' );
+//         $( 'head' ).append( addCSS );
+//     },
+    
+//     main : function() {
+//       var dp = 0;
+//       obj.text( '' );
+      
+//       $.each( this.arr, function( index, value ) {
+
+//         dp = dp.randomInt( drop.range.min, drop.range.max );
+        
+//         if ( value === ' ' )
+//           value = '&nbsp'; //Add spaces
+        
+//           obj.append( '<span class="letterDrop ld' + dp + '">' + value + '</span>' );
+        
+//       });
+          
+//     }
+//   };
+   
+//   Number.prototype.randomInt = function ( min, max ) {
+//     return Math.floor( Math.random() * ( max - min + 1 ) + min );
+//   };
+  
+  
+//   // Create styles
+//   drop.styles();
+
+
+//     // Initialise
+//     drop.main();
+//   });
+
+// };
+
+// (jQuery);
+
+
+// // USAGE
+// $( '.drop' ).letterDrop();
+
+    </script>
+    
+    <!-- END REVOLUTION SLIDER -->
+    <script>
+        var height = screen.height;
+                        var revapi116,
+            tpj;
+(function() {
+    if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded",onLoad); else onLoad();
+
+    function onLoad() {
+        if (tpj===undefined) { tpj = jQuery; if("off" == "on") tpj.noConflict();}
+                if(tpj("#rev_slider_116_1").revolution == undefined){
+                    revslider_showDoubleJqueryError("#rev_slider_116_1");
+                }else{
+                    revapi116 = tpj("#rev_slider_116_1").show().revolution({
+                        sliderType:"standard",
+jsFileLocation:"//localhost/revslider-standalone/revslider/public/assets/js/",
+                        sliderLayout:"fullwidth",
+                        dottedOverlay:"none",
+                        delay:9000,
+                        particles: {startSlide: "first", endSlide: "last", zIndex: "1",
+                            particles: {
+                                number: {value: 100}, color: {value: "#ffffff"},
+                                shape: {
+                                    type: "circle", stroke: {width: 0, color: "#ffffff", opacity: 1},
+                                    image: {src: ""}
+                                },
+                                opacity: {value: 0.4, random: true, min: 0.25, anim: {enable: false, speed: 3, opacity_min: 0, sync: false}},
+                                size: {value: 2, random: false, min: 30, anim: {enable: false, speed: 40, size_min: 1, sync: false}},
+                                line_linked: {enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1},
+                                move: {enable: true, speed: 3, direction: "none", random: false, min_speed: 6, straight: false, out_mode: "out"}},
+                            interactivity: {
+                                events: {onhover: {enable: true, mode: "repulse"}, onclick: {enable: false, mode: "repulse"}},
+                                modes: {grab: {distance: 400, line_linked: {opacity: 0.5}}, bubble: {distance: 400, size: 40, opacity: 0.4}, repulse: {distance: 170}}
+                            }
+                        },
+                        navigation: {
+                            keyboardNavigation:"off",
+                            keyboard_direction: "horizontal",
+                            mouseScrollNavigation:"off",
+                             mouseScrollReverse:"default",
+                            onHoverStop:"off",
+                            bullets: {
+                                enable:true,
+                                hide_onmobile:false,
+                                style:"hebe",
+                                hide_onleave:false,
+                                direction:"horizontal",
+                                h_align:"center",
+                                v_align:"bottom",
+                                h_offset:0,
+                                v_offset:60,
+                                space:5,
+                                tmp:'<span class="tp-bullet-image"></span>'
+                            }
+                        },
+                        visibilityLevels:[1240,1024,778,480],
+                        gridwidth:1170,
+                        gridheight:height,
+                        lazyType:"none",
+                        shadow:0,
+                        spinner:"spinner0",
+                        stopLoop:"off",
+                        stopAfterLoops:-1,
+                        stopAtSlide:-1,
+                        shuffle:"off",
+                        autoHeight:"off",
+                        disableProgressBar:"on",
+                        hideThumbsOnMobile:"off",
+                        hideSliderAtLimit:0,
+                        hideCaptionAtLimit:0,
+                        hideAllCaptionAtLilmit:0,
+                        debugMode:false,
+                        fallbacks: {
+                            simplifyAll:"off",
+                            nextSlideOnWindowFocus:"off",
+                            disableFocusListener:false,
+                        }
+                    });
+    }; /* END OF revapi call */
+            
+                RsParticlesAddOn(revapi116);
+ }; /* END OF ON LOAD FUNCTION */
+}()); /* END OF WRAPPING FUNCTION */
+        </script>
+        
+   
+</body>
+
+</html>

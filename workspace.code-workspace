@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\..\\Website\\.firebase"
+		},
+		{
+			"path": "..\\..\\Website\\public"
+		}
+	],
+	"settings": {}
+}
